@@ -71,7 +71,7 @@ export default function Stats() {
         });
         gsap.from(".stat-card", {
           scrollTrigger: { trigger: ".stats-grid", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 32, scale: 0.9, duration: 0.5, ease: "back.out(1.4)", stagger: 0.1,
+          opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.1,
         });
       }, sectionRef);
       cleanup = () => ctx.revert();

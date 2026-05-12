@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./Hero.module.css";
-import { WaIcon, CalendarIcon, PersonIcon, ChatIcon } from "./icons";
+import { WaIcon, CalendarIcon, PersonIcon, ChatIcon, StarIcon } from "./icons";
 
 const WA_URL = "https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares";
 
@@ -97,6 +97,14 @@ export default function Hero() {
             <div>
               <div className={styles.chipTitle}>Devolutiva semanal</div>
               <div className={styles.chipSub}>para toda a família</div>
+            </div>
+          </div>
+
+          <div className={`hero-chip ${styles.chip} ${styles.chipAlt}`}>
+            <div className={`${styles.chipIc} ${styles.chipMenta}`}><StarIcon /></div>
+            <div>
+              <div className={styles.chipTitle}>10+ anos</div>
+              <div className={styles.chipSub}>de experiência</div>
             </div>
           </div>
         </div>

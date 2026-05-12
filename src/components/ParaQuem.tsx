@@ -29,7 +29,7 @@ export default function ParaQuem() {
         });
         gsap.from(".pq-item", {
           scrollTrigger: { trigger: ".pq-list", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 24, duration: 0.45, ease: "power3.out", stagger: 0.07,
+          opacity: 0, duration: 0.45, ease: "power2.out", stagger: 0.07,
         });
       }, sectionRef);
       cleanup = () => ctx.revert();

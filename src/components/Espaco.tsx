@@ -76,7 +76,7 @@ export default function Espaco() {
                     src={t.src}
                     alt={t.alt}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "cover", objectPosition: t.label === "jogos" ? "left center" : "center" }}
                     sizes="(max-width: 640px) 50vw, 300px"
                   />
                 ) : (

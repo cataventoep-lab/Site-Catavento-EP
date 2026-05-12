@@ -88,10 +88,11 @@
   .burger { display: flex; }
 }
 
-/* Mobile pequeno: botão CTA compacto (só ícone + "WhatsApp") */
+/* Mobile pequeno: logo menor, sem hamburger, botão CTA compacto */
 @media (max-width: 640px) {
-  .inner { padding-top: 12px; padding-bottom: 12px; gap: 8px; }
-  .logo img { height: 40px; }
+  .inner { padding-top: 10px; padding-bottom: 10px; gap: 8px; }
+  .logo img { height: 34px; }
   .navCta { padding: 10px 14px !important; font-size: 13px !important; }
   .navCtaLabel { display: none; }
+  .burger { display: none; }
 }

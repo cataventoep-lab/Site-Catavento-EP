@@ -67,7 +67,7 @@ export default function Servicos() {
         });
         gsap.from(".serv-card", {
           scrollTrigger: { trigger: ".serv-grid", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 40, duration: 0.6, ease: "power3.out", stagger: 0.1,
+          opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.1,
         });
         gsap.from(".serv-cta", {
           scrollTrigger: { trigger: ".serv-cta", start: "top 90%", toggleActions: "play none none none" },

@@ -28,7 +28,7 @@ export default function Depoimentos() {
         });
         gsap.from(".testi-card", {
           scrollTrigger: { trigger: ".testi-grid", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 36, duration: 0.55, ease: "power3.out", stagger: 0.1,
+          opacity: 0, duration: 0.55, ease: "power2.out", stagger: 0.1,
         });
         gsap.from(".testi-cta", {
           scrollTrigger: { trigger: ".testi-cta", start: "top 90%", toggleActions: "play none none none" },
@@ -50,9 +50,9 @@ export default function Depoimentos() {
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
               Histórias reais de famílias que viram seus filhos transformarem a relação com os estudos.
             </p>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", borderRadius: 999, padding: "8px 18px", boxShadow: "0 2px 10px rgba(0,0,0,0.08)", marginTop: 20, fontSize: 14, fontWeight: 700, color: "#1F2D5C" }}>
-              <span style={{ color: "#F4C622", letterSpacing: 2 }}>★★★★★</span>
-              5 estrelas no Google
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#fff", borderRadius: 16, padding: "12px 24px", boxShadow: "0 4px 18px rgba(0,0,0,0.12)", marginTop: 24, fontSize: 16, fontWeight: 800, color: "#1F2D5C", border: "2px solid #F4C622" }}>
+              <span style={{ fontSize: 22, color: "#F4C622", letterSpacing: 3, lineHeight: 1 }}>★★★★★</span>
+              <span>5 estrelas no Google</span>
             </div>
           </div>
         </div>

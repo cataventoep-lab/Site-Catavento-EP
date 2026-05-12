@@ -34,7 +34,7 @@ export default function FinalCta() {
       <div className="wrap">
         <div className={`final-inner ${styles.inner}`}>
           <span className={`eyebrow ${styles.eyebrow}`}>Vamos conversar?</span>
-          <h2 className={styles.h2}>Vamos conversar sobre as necessidades do seu filho?</h2>
+          <h2 className={styles.h2}>Vamos entender juntos o que seu filho precisa?</h2>
           <p className={styles.lead}>
             Se você busca um atendimento pedagógico individualizado, acolhedor e planejado de acordo com o que seu filho precisa, será um prazer conhecê-lo e entender como podemos caminhar juntos.
           </p>

@@ -30,7 +30,7 @@ export default function ComoFunciona() {
         });
         gsap.from(".como-step", {
           scrollTrigger: { trigger: ".como-steps", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 44, duration: 0.55, ease: "back.out(1.4)", stagger: 0.1,
+          opacity: 0, duration: 0.55, ease: "power2.out", stagger: 0.1,
         });
         gsap.from(".como-cta", {
           scrollTrigger: { trigger: ".como-cta", start: "top 92%", toggleActions: "play none none none" },

@@ -90,6 +90,7 @@
 .chipTop { top: 20px; right: 0; }
 .chipMid { top: 50%; right: -28px; }
 .chipBot { bottom: 16px; left: -32px; }
+.chipAlt { top: 20px; left: -32px; }
 
 .chipIc {
   width: 40px;
@@ -114,23 +115,30 @@
   .copy { padding-right: 0; }
 }
 
-/* Mobile: chips menores e abaixo da linha do rosto (~60% da stage) */
+/* Mobile: layout compacto + chips em 2×2 no canto inferior */
 @media (max-width: 640px) {
-  .h1 { font-size: 36px; }
+  .h1 { font-size: 30px; }
+
+  /* Reduz padding para a imagem "espreitar" na base */
+  .inner { padding-top: 8px; padding-bottom: 0; }
 
   .chip {
-    padding: 7px 12px 7px 7px;
-    gap: 8px;
+    padding: 6px 10px 6px 6px;
+    gap: 7px;
+    max-width: 48%;
   }
   .chipIc {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
-  .chipTitle { font-size: 11px; }
-  .chipSub   { font-size: 10px; }
+  .chipTitle { font-size: 10px; }
+  .chipSub   { font-size: 9px; }
 
-  /* Todos os chips abaixo de 60% da altura — zona do corpo, longe do rosto */
-  .chipTop { top: auto; right: -4px; bottom: 38%; }
-  .chipMid { top: auto; right: auto; left: -4px; bottom: 19%; }
-  .chipBot { bottom: 4px; left: 4px; right: auto; }
+  /* 2×2 grid: coluna esquerda e direita, 2 linhas */
+  /* linha superior */
+  .chipTop { top: auto; right: -4px; left: auto; bottom: 28%; }
+  .chipAlt { top: auto; left: -4px;  right: auto; bottom: 28%; }
+  /* linha inferior */
+  .chipMid { top: auto; right: -4px; left: auto; bottom: 2%; }
+  .chipBot { bottom: 2%; left: -4px; right: auto; }
 }
