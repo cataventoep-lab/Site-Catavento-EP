@@ -1,0 +1,139 @@
+.hero {
+  padding-top: 96px; /* offset for fixed header */
+  overflow: hidden;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 96px;
+}
+
+.copy { padding-right: 16px; max-width: 580px; }
+
+.h1 {
+  margin: 18px 0 0;
+  font-size: 54px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--cv-marinho);
+}
+
+.accent { color: var(--cv-laranja); }
+
+.lead {
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--cv-fg-muted);
+  max-width: 540px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.bullets {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  max-width: 540px;
+  list-style: none;
+}
+.bullets li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--cv-marinho);
+  font-weight: 500;
+}
+
+/* Stage */
+.stage {
+  position: relative;
+  aspect-ratio: 1;
+  max-width: 540px;
+  justify-self: end;
+  width: 100%;
+}
+
+.blob {
+  position: absolute;
+  inset: 0;
+  background: var(--cv-coral-soft);
+  border-radius: 48% 52% 56% 44% / 56% 48% 52% 44%;
+  z-index: 0;
+}
+
+.dots {
+  position: absolute;
+  left: -28px;
+  bottom: 60px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.art {
+  position: absolute;
+  inset: 8% 12%;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Chips */
+.chip {
+  position: absolute;
+  z-index: 5;
+  background: #fff;
+  border-radius: var(--cv-radius-pill);
+  padding: 10px 18px 10px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--cv-shadow-md);
+}
+
+.chipTop { top: 20px; right: 0; }
+.chipMid { top: 50%; right: -28px; }
+.chipBot { bottom: 16px; left: -32px; }
+
+.chipIc {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+.chipMenta    { background: var(--cv-menta-strong); }
+.chipGirassol { background: var(--cv-girassol-strong); color: var(--cv-marinho); }
+.chipCoral    { background: var(--cv-coral-strong); }
+
+.chipTitle { font-size: 13px; font-weight: 700; color: var(--cv-marinho); line-height: 1.2; }
+.chipSub   { font-size: 11px; color: var(--cv-fg-muted); line-height: 1.3; }
+
+@media (max-width: 980px) {
+  .inner { grid-template-columns: 1fr; }
+  .stage { max-width: 420px; justify-self: center; }
+  .copy { padding-right: 0; }
+}
+@media (max-width: 640px) {
+  .h1 { font-size: 38px; }
+  .bullets { grid-template-columns: 1fr; }
+  .chipMid { right: 0; }
+  .chipBot { left: -10px; }
+}
