@@ -72,7 +72,7 @@ export default function Depoimentos() {
         <div className={`testi-cta ${styles.cta}`}>
           Será um prazer atender sua família também.
           <div style={{ marginTop: 18 }}>
-            <a href="#final" className="btn btn--primary">
+            <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
               <WaIcon />
               Conversar pelo WhatsApp
             </a>

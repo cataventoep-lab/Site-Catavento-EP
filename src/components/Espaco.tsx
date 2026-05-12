@@ -1,21 +1,22 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import styles from "./Espaco.module.css";
 import { CheckIcon } from "./icons";
 
 const bullets = [
-  "Ambiente premium e organizado",
+  "Ambiente acolhedor e organizado",
   "Recursos lúdicos e interativos",
   "Materiais exclusivos",
   "Espaço confortável e inspirador",
 ];
 
 const tiles = [
-  { label: "sala de aula", bg: "var(--cv-girassol-soft)", span: "tall" },
-  { label: "materiais", bg: "var(--cv-menta-soft)", span: "normal" },
-  { label: "jogos", bg: "var(--cv-serenity-soft)", span: "normal" },
-  { label: "recepção", bg: "var(--cv-coral-soft)", span: "wide" },
+  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento", span: "tall", bg: "var(--cv-girassol-soft)" },
+  { label: "materiais", src: "/espaco-materiais.webp", alt: "Materiais pedagógicos", span: "normal", bg: "var(--cv-menta-soft)" },
+  { label: "jogos", src: null, alt: "", span: "normal", bg: "var(--cv-serenity-soft)" },
+  { label: "recepção", src: "/espaco-recepcao.webp", alt: "Recepção do Catavento", span: "wide", bg: "var(--cv-coral-soft)" },
 ];
 
 export default function Espaco() {
@@ -68,9 +69,19 @@ export default function Espaco() {
               <div
                 key={i}
                 className={`espaco-tile ${styles.tile} ${t.span === "tall" ? styles.tileTall : t.span === "wide" ? styles.tileWide : ""}`}
-                style={{ background: t.bg }}
+                style={t.src ? undefined : { background: t.bg }}
               >
-                <span className={styles.ph}>foto · {t.label}</span>
+                {t.src ? (
+                  <Image
+                    src={t.src}
+                    alt={t.alt}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 640px) 50vw, 300px"
+                  />
+                ) : (
+                  <span className={styles.ph}>foto · {t.label}</span>
+                )}
               </div>
             ))}
           </div>

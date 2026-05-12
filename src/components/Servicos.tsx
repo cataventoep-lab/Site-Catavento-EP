@@ -105,7 +105,7 @@ export default function Servicos() {
 
         <div className={`serv-cta ${styles.cta}`}>
           <p>Fale conosco e descubra como podemos ajudar seu filho.</p>
-          <a href="#final" className="btn btn--primary">
+          <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
             <WaIcon />
             Falar pelo WhatsApp
           </a>
