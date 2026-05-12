@@ -50,6 +50,10 @@ export default function Depoimentos() {
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
               Histórias reais de famílias que viram seus filhos transformarem a relação com os estudos.
             </p>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", borderRadius: 999, padding: "8px 18px", boxShadow: "0 2px 10px rgba(0,0,0,0.08)", marginTop: 20, fontSize: 14, fontWeight: 700, color: "#1F2D5C" }}>
+              <span style={{ color: "#F4C622", letterSpacing: 2 }}>★★★★★</span>
+              5 estrelas no Google
+            </div>
           </div>
         </div>
 

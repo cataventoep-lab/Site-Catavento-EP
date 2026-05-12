@@ -75,4 +75,10 @@
 @media (max-width: 640px) {
   .list { grid-template-columns: 1fr; }
   .h2 { font-size: 28px; }
+  .item {
+    padding: 14px 16px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

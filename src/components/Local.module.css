@@ -91,5 +91,19 @@
 }
 @media (max-width: 640px) {
   .h2 { font-size: 28px; }
-  .map { height: 280px; }
+  .map { height: 260px; }
+  .addr { padding: 16px; gap: 12px; }
+  .addrBody {
+    font-size: 14px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .cta a {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
 }

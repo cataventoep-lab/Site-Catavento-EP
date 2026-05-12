@@ -41,23 +41,6 @@
   flex-wrap: wrap;
 }
 
-.bullets {
-  margin-top: 36px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 24px;
-  max-width: 540px;
-  list-style: none;
-}
-.bullets li {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  font-size: 14px;
-  color: var(--cv-marinho);
-  font-weight: 500;
-}
-
 /* Stage */
 .stage {
   position: relative;
@@ -130,9 +113,24 @@
   .stage { max-width: 420px; justify-self: center; }
   .copy { padding-right: 0; }
 }
+
+/* Mobile: chips menores e reposicionados para não cobrir o rosto */
 @media (max-width: 640px) {
-  .h1 { font-size: 38px; }
-  .bullets { grid-template-columns: 1fr; }
-  .chipMid { right: 0; }
-  .chipBot { left: -10px; }
+  .h1 { font-size: 36px; }
+
+  .chip {
+    padding: 7px 12px 7px 7px;
+    gap: 8px;
+  }
+  .chipIc {
+    width: 30px;
+    height: 30px;
+  }
+  .chipTitle { font-size: 11px; }
+  .chipSub   { font-size: 10px; }
+
+  /* Reposicionar para cantos inferiores e laterais da imagem, longe do rosto */
+  .chipTop { top: auto; bottom: 48%; right: 4px; }
+  .chipMid { top: auto; right: auto; bottom: 24%; left: -8px; }
+  .chipBot { bottom: 4px; left: 4px; }
 }

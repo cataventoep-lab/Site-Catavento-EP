@@ -13,10 +13,10 @@ const bullets = [
 ];
 
 const tiles = [
-  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento", span: "tall", bg: "var(--cv-girassol-soft)" },
-  { label: "materiais", src: "/espaco-materiais.webp", alt: "Materiais pedagógicos", span: "normal", bg: "var(--cv-menta-soft)" },
-  { label: "jogos", src: null, alt: "", span: "normal", bg: "var(--cv-serenity-soft)" },
-  { label: "recepção", src: "/espaco-recepcao.webp", alt: "Recepção do Catavento", span: "wide", bg: "var(--cv-coral-soft)" },
+  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento", tall: true, bg: "var(--cv-girassol-soft)" },
+  { label: "materiais", src: "/espaco-materiais.webp", alt: "Materiais pedagógicos", tall: false, bg: "var(--cv-menta-soft)" },
+  { label: "jogos", src: null, alt: "", tall: false, bg: "var(--cv-serenity-soft)" },
+  { label: "recepção", src: "/espaco-recepcao.webp", alt: "Recepção do Catavento", tall: false, bg: "var(--cv-coral-soft)" },
 ];
 
 export default function Espaco() {
@@ -68,7 +68,7 @@ export default function Espaco() {
             {tiles.map((t, i) => (
               <div
                 key={i}
-                className={`espaco-tile ${styles.tile} ${t.span === "tall" ? styles.tileTall : t.span === "wide" ? styles.tileWide : ""}`}
+                className={`espaco-tile ${styles.tile} ${t.tall ? styles.tileTall : ""}`}
                 style={t.src ? undefined : { background: t.bg }}
               >
                 {t.src ? (

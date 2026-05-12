@@ -33,11 +33,13 @@
   font-weight: 500;
 }
 
+/* Gallery: foto 1 portrait (3:4) à esquerda, fotos 2-4 landscape empilhadas à direita */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 160px 160px 160px;
-  gap: 14px;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  height: 500px;
 }
 
 .tile {
@@ -51,8 +53,7 @@
 }
 .tile:hover { transform: scale(1.02); }
 
-.tileTall { grid-row: 1 / span 2; }
-.tileWide { grid-column: 1 / span 2; }
+.tileTall { grid-row: 1 / span 3; }
 
 .ph {
   background: rgba(255,255,255,0.7);
@@ -69,5 +70,16 @@
 }
 @media (max-width: 640px) {
   .h2 { font-size: 28px; }
-  .gallery { grid-template-rows: 120px 120px 120px; }
+  .gallery {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .tileTall {
+    grid-row: auto;
+    aspect-ratio: 3/4;
+  }
+  .tile:not(.tileTall) {
+    aspect-ratio: 4/3;
+  }
 }
