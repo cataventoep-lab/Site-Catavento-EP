@@ -37,7 +37,7 @@ export default function Hero() {
           <h1 className={`hero-h1 ${styles.h1}`}>
             Apoio pedagógico{" "}
             <span className={styles.accent}>individualizado</span>{" "}
-            para sua criança evoluir com confiança.
+            para sua criança evoluir com confiança
           </h1>
           <p className={`hero-lead ${styles.lead}`}>
             Aulas particulares, reforço escolar e alfabetização com planejamento
@@ -80,7 +80,7 @@ export default function Hero() {
             <div className={`${styles.chipIc} ${styles.chipMenta}`}><CalendarIcon /></div>
             <div>
               <div className={styles.chipTitle}>60 minutos</div>
-              <div className={styles.chipSub}>de atendimento exclusivo</div>
+              <div className={styles.chipSub}>exclusivo semanalmente</div>
             </div>
           </div>
 

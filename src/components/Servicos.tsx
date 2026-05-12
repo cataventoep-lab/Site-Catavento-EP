@@ -87,8 +87,7 @@ export default function Servicos() {
             <span className="eyebrow">Como podemos ajudar</span>
             <h2>Como podemos ajudar seu filho</h2>
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Cada criança aprende de forma única. Por isso, planejamos atendimentos
-              personalizados, respeitando seu ritmo e suas necessidades.
+              Cada criança aprende de forma única. Por isso, planejamos aulas de acordo com suas necessidades.
             </p>
           </div>
         </div>

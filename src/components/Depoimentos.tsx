@@ -48,7 +48,7 @@ export default function Depoimentos() {
             <span className="eyebrow">Depoimentos</span>
             <h2>O que as famílias dizem sobre nós</h2>
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Histórias reais de famílias que viram seus filhos transformarem a relação com os estudos.
+              Histórias reais de famílias que viram seus filhos evoluírem nos estudos.
             </p>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#fff", borderRadius: 16, padding: "12px 24px", boxShadow: "0 4px 18px rgba(0,0,0,0.12)", marginTop: 24, fontSize: 16, fontWeight: 800, color: "#1F2D5C", border: "2px solid #F4C622" }}>
               <span style={{ fontSize: 22, color: "#F4C622", letterSpacing: 3, lineHeight: 1 }}>★★★★★</span>

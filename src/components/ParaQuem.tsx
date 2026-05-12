@@ -5,8 +5,8 @@ import styles from "./ParaQuem.module.css";
 
 const items = [
   { letter: "A", bg: "var(--cv-coral-soft)", color: "var(--cv-coral-strong)", text: "Estão em fase de alfabetização" },
-  { letter: "B", bg: "var(--cv-menta-soft)", color: "var(--cv-verde-pin)", text: "Têm dificuldades em leitura, escrita ou matemática" },
-  { letter: "C", bg: "var(--cv-serenity-soft)", color: "var(--cv-azul-pin)", text: "Precisam de reforço escolar" },
+  { letter: "B", bg: "var(--cv-menta-soft)", color: "var(--cv-verde-pin)", text: "Têm dificuldades na leitura, escrita e/ou matemática" },
+  { letter: "C", bg: "var(--cv-serenity-soft)", color: "var(--cv-azul-pin)", text: "Têm tirado notas baixas nas disciplinas escolares" },
   { letter: "D", bg: "var(--cv-girassol-soft)", color: "var(--cv-girassol-deep)", text: "Apresentam dificuldades de atenção e organização" },
   { letter: "E", bg: "var(--cv-coral-soft)", color: "var(--cv-coral-strong)", text: "Necessitam desenvolver autonomia nos estudos" },
   { letter: "F", bg: "var(--cv-menta-soft)", color: "var(--cv-verde-pin)", text: "Possuem demandas como TDAH, dislexia e autismo" },
@@ -49,6 +49,7 @@ export default function ParaQuem() {
               Nosso atendimento é pensado para crianças que precisam de um olhar atento, paciente e planejado — em qualquer fase da jornada escolar.
             </p>
           </div>
+          <p className={styles.listLabel}>Para as crianças que:</p>
           <ul className={`pq-list ${styles.list}`}>
             {items.map((it) => (
               <li key={it.letter} className={`pq-item ${styles.item}`}>
