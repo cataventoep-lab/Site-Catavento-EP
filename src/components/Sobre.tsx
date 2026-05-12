@@ -25,7 +25,6 @@ export default function Sobre() {
           scrollTrigger: { trigger: sectionRef.current, start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, scale: 0.9, x: -32, duration: 0.9, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".sobre-copy > *", {
           scrollTrigger: { trigger: ".sobre-copy", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: 32, duration: 0.6, ease: "power3.out", stagger: 0.1,
@@ -35,6 +34,7 @@ export default function Sobre() {
           opacity: 0, y: 16, scale: 0.9, duration: 0.4, ease: "back.out(1.7)", stagger: 0.07,
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

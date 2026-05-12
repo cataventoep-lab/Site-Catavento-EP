@@ -65,7 +65,6 @@ export default function Stats() {
           scrollTrigger: { trigger: ".stats-inner", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, y: 40, scale: 0.97, duration: 0.8, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".stats-copy > *", {
           scrollTrigger: { trigger: ".stats-copy", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: -24, duration: 0.6, ease: "power3.out", stagger: 0.1,
@@ -75,6 +74,7 @@ export default function Stats() {
           opacity: 0, y: 32, scale: 0.9, duration: 0.5, ease: "back.out(1.4)", stagger: 0.1,
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

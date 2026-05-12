@@ -33,12 +33,12 @@ export default function Espaco() {
           scrollTrigger: { trigger: ".espaco-copy", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: -32, duration: 0.6, ease: "power3.out", stagger: 0.1,
         });
-      cleanup = () => ctx.revert();
         gsap.from(".espaco-tile", {
           scrollTrigger: { trigger: ".espaco-gallery", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, scale: 0.88, duration: 0.55, ease: "back.out(1.4)", stagger: 0.1,
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

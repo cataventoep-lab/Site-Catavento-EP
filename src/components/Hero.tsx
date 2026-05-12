@@ -21,7 +21,6 @@ export default function Hero() {
       const { default: gsap } = await import("gsap");
       const ctx = gsap.context(() => {
         const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      cleanup = () => ctx.revert();
 
         tl.from(".hero-eyebrow", { opacity: 0, y: 20, duration: 0.6 })
           .from(".hero-h1", { opacity: 0, y: 32, duration: 0.7 }, "-=0.3")
@@ -31,6 +30,7 @@ export default function Hero() {
           .from(".hero-stage", { opacity: 0, scale: 0.92, duration: 0.9, ease: "back.out(1.4)" }, "-=0.7")
           .from(".hero-chip", { opacity: 0, scale: 0.8, duration: 0.5, stagger: 0.12, ease: "back.out(1.7)" }, "-=0.5");
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

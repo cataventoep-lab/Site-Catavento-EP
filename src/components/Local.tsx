@@ -19,12 +19,12 @@ export default function Local() {
           scrollTrigger: { trigger: ".local-copy", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: -32, duration: 0.6, ease: "power3.out", stagger: 0.1,
         });
-      cleanup = () => ctx.revert();
         gsap.from(".local-map", {
           scrollTrigger: { trigger: ".local-map", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: 40, scale: 0.96, duration: 0.8, ease: "power3.out",
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

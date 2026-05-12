@@ -28,7 +28,6 @@ export default function ComoFunciona() {
           scrollTrigger: { trigger: ".como-head", start: "top 88%", toggleActions: "play none none none" },
           opacity: 0, y: 28, duration: 0.7, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".como-step", {
           scrollTrigger: { trigger: ".como-steps", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, y: 44, duration: 0.55, ease: "back.out(1.4)", stagger: 0.1,
@@ -38,6 +37,7 @@ export default function ComoFunciona() {
           opacity: 0, y: 20, duration: 0.5, ease: "power3.out",
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

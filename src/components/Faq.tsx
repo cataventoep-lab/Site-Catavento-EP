@@ -49,12 +49,12 @@ export default function Faq() {
           scrollTrigger: { trigger: ".faq-copy", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: -32, duration: 0.7, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".faq-item", {
           scrollTrigger: { trigger: ".faq-list", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: 32, duration: 0.45, ease: "power3.out", stagger: 0.07,
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

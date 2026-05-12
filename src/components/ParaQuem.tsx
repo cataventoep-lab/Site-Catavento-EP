@@ -27,12 +27,12 @@ export default function ParaQuem() {
           scrollTrigger: { trigger: sectionRef.current, start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, y: 28, duration: 0.7, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".pq-item", {
           scrollTrigger: { trigger: ".pq-list", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, y: 24, duration: 0.45, ease: "power3.out", stagger: 0.07,
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

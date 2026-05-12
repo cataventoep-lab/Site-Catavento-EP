@@ -19,12 +19,12 @@ export default function FinalCta() {
           scrollTrigger: { trigger: ".final-inner", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, y: 40, scale: 0.97, duration: 0.8, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".final-inner > *", {
           scrollTrigger: { trigger: ".final-inner", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, y: 24, duration: 0.55, ease: "power3.out", stagger: 0.1, delay: 0.2,
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

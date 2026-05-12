@@ -65,7 +65,6 @@ export default function Servicos() {
           scrollTrigger: { trigger: ".serv-head", start: "top 88%", toggleActions: "play none none none" },
           opacity: 0, y: 32, duration: 0.7, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".serv-card", {
           scrollTrigger: { trigger: ".serv-grid", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, y: 40, duration: 0.6, ease: "power3.out", stagger: 0.1,
@@ -75,6 +74,7 @@ export default function Servicos() {
           opacity: 0, y: 20, duration: 0.5, ease: "power3.out",
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);

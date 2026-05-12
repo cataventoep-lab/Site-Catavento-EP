@@ -28,12 +28,12 @@ export default function Diferenciais() {
           scrollTrigger: { trigger: ".dif-copy", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: -40, duration: 0.8, ease: "power3.out",
         });
-      cleanup = () => ctx.revert();
         gsap.from(".dif-item", {
           scrollTrigger: { trigger: ".dif-list", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: 40, duration: 0.5, ease: "power3.out", stagger: 0.08,
         });
       }, sectionRef);
+      cleanup = () => ctx.revert();
     })();
     return () => cleanup?.();
   }, []);
