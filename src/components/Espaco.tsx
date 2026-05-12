@@ -13,9 +13,9 @@ const bullets = [
 ];
 
 const tiles = [
-  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento", tall: true, bg: "var(--cv-girassol-soft)" },
+  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento", tall: false, bg: "var(--cv-girassol-soft)" },
   { label: "materiais", src: "/espaco-materiais.webp", alt: "Materiais pedagógicos", tall: false, bg: "var(--cv-menta-soft)" },
-  { label: "jogos", src: null, alt: "", tall: false, bg: "var(--cv-serenity-soft)" },
+  { label: "jogos", src: "/espaco-jogos.webp", alt: "Sala de jogos do Catavento", tall: false, bg: "var(--cv-serenity-soft)" },
   { label: "recepção", src: "/espaco-recepcao.webp", alt: "Recepção do Catavento", tall: false, bg: "var(--cv-coral-soft)" },
 ];
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import styles from "./Local.module.css";
 import { WaIcon, MapPinIcon } from "./icons";
 
@@ -59,30 +60,14 @@ export default function Local() {
             </div>
           </div>
 
-          <div className={`local-map ${styles.map}`} aria-hidden="true">
-            <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice">
-              <rect width="600" height="420" fill="#E2ECF2"/>
-              <path d="M0 110 Q 200 90 600 160" stroke="#fff" strokeWidth="18" fill="none"/>
-              <path d="M0 280 Q 280 240 600 320" stroke="#fff" strokeWidth="14" fill="none"/>
-              <path d="M180 0 L 220 420" stroke="#fff" strokeWidth="20" fill="none"/>
-              <path d="M420 0 Q 380 200 460 420" stroke="#fff" strokeWidth="14" fill="none"/>
-              <rect x="40" y="30" width="120" height="60" rx="8" fill="#DDEEEB"/>
-              <rect x="40" y="160" width="120" height="100" rx="8" fill="#FBEEB0" opacity="0.5"/>
-              <rect x="240" y="40" width="160" height="50" rx="8" fill="#DDEEEB"/>
-              <rect x="250" y="180" width="140" height="50" rx="8" fill="#F4DDD0" opacity="0.6"/>
-              <rect x="260" y="250" width="120" height="50" rx="8" fill="#FBEEB0" opacity="0.5"/>
-              <rect x="440" y="30" width="130" height="100" rx="8" fill="#DDEEEB"/>
-              <rect x="480" y="170" width="100" height="80" rx="8" fill="#F4DDD0" opacity="0.6"/>
-              <rect x="470" y="340" width="120" height="70" rx="8" fill="#DDEEEB"/>
-              <circle cx="90" cy="370" r="22" fill="#A7D6CF" opacity="0.7"/>
-              <circle cx="130" cy="380" r="14" fill="#A7D6CF" opacity="0.7"/>
-            </svg>
-            <div className={styles.pin}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/>
-              </svg>
-              Catavento
-            </div>
+          <div className={`local-map ${styles.map}`}>
+            <Image
+              src="/foto-local.webp"
+              alt="Fachada do Catavento Espaço Pedagógico em Fazenda Rio Grande"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              sizes="(max-width: 980px) 100vw, 50vw"
+            />
           </div>
         </div>
       </div>

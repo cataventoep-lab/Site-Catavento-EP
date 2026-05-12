@@ -114,7 +114,7 @@
   .copy { padding-right: 0; }
 }
 
-/* Mobile: chips menores e reposicionados para não cobrir o rosto */
+/* Mobile: chips menores e abaixo da linha do rosto (~60% da stage) */
 @media (max-width: 640px) {
   .h1 { font-size: 36px; }
 
@@ -129,8 +129,8 @@
   .chipTitle { font-size: 11px; }
   .chipSub   { font-size: 10px; }
 
-  /* Reposicionar para cantos inferiores e laterais da imagem, longe do rosto */
-  .chipTop { top: auto; bottom: 48%; right: 4px; }
-  .chipMid { top: auto; right: auto; bottom: 24%; left: -8px; }
-  .chipBot { bottom: 4px; left: 4px; }
+  /* Todos os chips abaixo de 60% da altura — zona do corpo, longe do rosto */
+  .chipTop { top: auto; right: -4px; bottom: 38%; }
+  .chipMid { top: auto; right: auto; left: -4px; bottom: 19%; }
+  .chipBot { bottom: 4px; left: 4px; right: auto; }
 }
