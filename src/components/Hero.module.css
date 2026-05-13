@@ -36,14 +36,12 @@
 .gradeBadge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--cv-menta-soft);
-  color: var(--cv-marinho);
-  border-radius: var(--cv-radius-pill);
-  padding: 7px 16px;
+  gap: 6px;
+  color: var(--cv-verde-pin);
   font-size: 13px;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 16px;
+  letter-spacing: 0.01em;
 }
 
 .cta {

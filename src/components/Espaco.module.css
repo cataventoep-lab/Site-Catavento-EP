@@ -33,7 +33,7 @@
   font-weight: 500;
 }
 
-/* Grade 2×2 uniforme */
+/* Grade 2×2 — desktop/tablet */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -44,11 +44,13 @@
   border-radius: var(--cv-radius-lg);
   position: relative;
   overflow: hidden;
-  /* Quadrado confiável: padding-top relativo à própria largura */
-  padding-top: 100%;
+  padding-top: 100%; /* altura = largura da coluna */
   transition: transform 220ms cubic-bezier(0.22,1,0.36,1);
 }
 .tile:hover { transform: scale(1.03); }
+
+/* Mobile: foto única */
+.galleryMobile { display: none; }
 
 .tileTall { /* não usado mais, mantido por compatibilidade */ }
 
@@ -67,5 +69,6 @@
 }
 @media (max-width: 640px) {
   .h2 { font-size: 28px; }
-  .gallery { max-width: 100%; }
+  .gallery { display: none; }
+  .galleryMobile { display: block; margin-top: 28px; }
 }

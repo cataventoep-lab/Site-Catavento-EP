@@ -37,7 +37,7 @@ export default function Hero() {
           <h1 className={`hero-h1 ${styles.h1}`}>
             Apoio pedagógico{" "}
             <span className={styles.accent}>individualizado</span>{" "}
-            para sua criança evoluir com confiança
+            para seu filho evoluir com confiança
           </h1>
           <p className={`hero-lead ${styles.lead}`}>
             Aulas particulares, reforço escolar e alfabetização com planejamento
