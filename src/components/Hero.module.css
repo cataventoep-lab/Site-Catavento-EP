@@ -33,29 +33,23 @@
   max-width: 540px;
 }
 
+.gradeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cv-verde-pin);
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 16px;
+  letter-spacing: 0.01em;
+}
+
 .cta {
   display: flex;
   gap: 16px;
   align-items: center;
   margin-top: 30px;
   flex-wrap: wrap;
-}
-
-.bullets {
-  margin-top: 36px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 24px;
-  max-width: 540px;
-  list-style: none;
-}
-.bullets li {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  font-size: 14px;
-  color: var(--cv-marinho);
-  font-weight: 500;
 }
 
 /* Stage */
@@ -87,9 +81,8 @@
   position: absolute;
   inset: 8% 12%;
   z-index: 3;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  border-radius: 44% 44% 28px 28px;
+  overflow: hidden;
 }
 
 /* Chips */
@@ -106,8 +99,9 @@
 }
 
 .chipTop { top: 20px; right: 0; }
-.chipMid { top: 50%; right: -28px; }
+.chipMid { bottom: 16px; right: -28px; }
 .chipBot { bottom: 16px; left: -32px; }
+.chipAlt { top: 20px; left: -32px; }
 
 .chipIc {
   width: 40px;
@@ -131,9 +125,31 @@
   .stage { max-width: 420px; justify-self: center; }
   .copy { padding-right: 0; }
 }
+
+/* Mobile: layout compacto + chips em 2×2 no canto inferior */
 @media (max-width: 640px) {
-  .h1 { font-size: 38px; }
-  .bullets { grid-template-columns: 1fr; }
-  .chipMid { right: 0; }
-  .chipBot { left: -10px; }
+  .h1 { font-size: 30px; }
+
+  /* Reduz padding para a imagem "espreitar" na base */
+  .inner { padding-top: 8px; padding-bottom: 0; }
+
+  .chip {
+    padding: 6px 10px 6px 6px;
+    gap: 7px;
+    max-width: 48%;
+  }
+  .chipIc {
+    width: 28px;
+    height: 28px;
+  }
+  .chipTitle { font-size: 10px; }
+  .chipSub   { font-size: 9px; }
+
+  /* 2×2 grid: coluna esquerda e direita, 2 linhas */
+  /* linha superior */
+  .chipTop { top: auto; right: -4px; left: auto; bottom: 28%; }
+  .chipAlt { top: auto; left: -4px;  right: auto; bottom: 28%; }
+  /* linha inferior */
+  .chipMid { top: auto; right: -4px; left: auto; bottom: 2%; }
+  .chipBot { bottom: 2%; left: -4px; right: auto; }
 }

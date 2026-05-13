@@ -28,7 +28,7 @@ export default function Depoimentos() {
         });
         gsap.from(".testi-card", {
           scrollTrigger: { trigger: ".testi-grid", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 36, duration: 0.55, ease: "power3.out", stagger: 0.1,
+          opacity: 0, duration: 0.55, ease: "power2.out", stagger: 0.1,
         });
         gsap.from(".testi-cta", {
           scrollTrigger: { trigger: ".testi-cta", start: "top 90%", toggleActions: "play none none none" },
@@ -48,8 +48,12 @@ export default function Depoimentos() {
             <span className="eyebrow">Depoimentos</span>
             <h2>O que as famílias dizem sobre nós</h2>
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Histórias reais de famílias que viram seus filhos transformarem a relação com os estudos.
+              Histórias reais de famílias que viram seus filhos evoluírem nos estudos.
             </p>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#fff", borderRadius: 16, padding: "12px 24px", boxShadow: "0 4px 18px rgba(0,0,0,0.12)", marginTop: 24, fontSize: 16, fontWeight: 800, color: "#1F2D5C", border: "2px solid #F4C622" }}>
+              <span style={{ fontSize: 22, color: "#F4C622", letterSpacing: 3, lineHeight: 1 }}>★★★★★</span>
+              <span>5 estrelas no Google</span>
+            </div>
           </div>
         </div>
 
@@ -72,7 +76,7 @@ export default function Depoimentos() {
         <div className={`testi-cta ${styles.cta}`}>
           Será um prazer atender sua família também.
           <div style={{ marginTop: 18 }}>
-            <a href="#final" className="btn btn--primary">
+            <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
               <WaIcon />
               Conversar pelo WhatsApp
             </a>

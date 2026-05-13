@@ -30,7 +30,7 @@ export default function ComoFunciona() {
         });
         gsap.from(".como-step", {
           scrollTrigger: { trigger: ".como-steps", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 44, duration: 0.55, ease: "back.out(1.4)", stagger: 0.1,
+          opacity: 0, duration: 0.55, ease: "power2.out", stagger: 0.1,
         });
         gsap.from(".como-cta", {
           scrollTrigger: { trigger: ".como-cta", start: "top 92%", toggleActions: "play none none none" },
@@ -75,7 +75,7 @@ export default function ComoFunciona() {
         </div>
 
         <div className={`como-cta ${styles.cta}`}>
-          <a href="#final" className="btn btn--primary">
+          <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
             <WaIcon />
             Agende uma conversa e saiba como funciona na prática
           </a>

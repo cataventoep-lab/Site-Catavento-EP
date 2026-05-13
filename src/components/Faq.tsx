@@ -4,9 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Faq.module.css";
 
 const items = [
-  { q: "Como é feita a avaliação inicial?", a: "Por meio de uma sondagem pedagógica para identificar o nível atual do aluno e suas necessidades." },
+  { q: "Como é feita a avaliação inicial?", a: "Por meio de uma sondagem diagnóstica com atividades e uso de recursos, em que identificamos o nível atual do aluno e suas necessidades, para seguirmos a partir daí." },
   { q: "Qual é a frequência das aulas?", a: "1, 2 ou 3 vezes por semana, conforme a necessidade da criança." },
-  { q: "Quanto tempo dura cada atendimento?", a: "60 minutos." },
+  { q: "Quanto tempo dura cada aula?", a: "60 minutos de atendimento exclusivo por sessão." },
+  { q: "Qual o valor das aulas?", a: "Trabalhamos com mensalidade. A família realiza o pagamento mensal por boleto bancário e as aulas são realizadas durante todo o mês. O valor da mensalidade é informado na conversa inicial — entre em contato pelo WhatsApp e agende." },
+  { q: "Realizam aulas avulsas?", a: "Não. Trabalhamos com contrato de 6 ou 12 meses de acompanhamento para garantir uma aprendizagem efetiva." },
   { q: "O atendimento é individual?", a: "Sim, com um aluno e uma professora." },
   { q: "Vocês atendem crianças com TDAH, dislexia e autismo?", a: "Sim. Adaptamos o planejamento e as estratégias para o perfil de cada criança." },
   { q: "Como acompanho a evolução do meu filho?", a: "Com devolutivas semanais pelo WhatsApp." },

@@ -39,24 +39,8 @@
 .photo {
   position: absolute;
   inset: 12% 14% 8%;
-  background: var(--cv-coral-soft);
   border-radius: 220px 220px 32px 32px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 24px;
   overflow: hidden;
-}
-
-.photoLabel {
-  font-size: 11px;
-  color: var(--cv-fg-subtle);
-  font-family: var(--cv-font-mono);
-  background: rgba(255,255,255,0.8);
-  padding: 6px 12px;
-  border-radius: 999px;
-  position: relative;
-  z-index: 1;
 }
 
 .h2 {

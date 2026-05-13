@@ -4,7 +4,7 @@
 
 .steps {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   position: relative;
 }
@@ -53,13 +53,15 @@
   z-index: 2;
 }
 .step:last-child .connector { display: none; }
+.step:nth-child(3n) .connector { display: none; }
 
-.cta { text-align: center; margin-top: 56px; }
+.cta { text-align: center; margin-top: 56px; padding: 0 16px; }
+.cta a { max-width: 100%; white-space: normal; word-break: break-word; }
 
 @media (max-width: 980px) {
-  .steps { grid-template-columns: repeat(3, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
   .connector { display: none; }
 }
 @media (max-width: 640px) {
-  .steps { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: 1fr; }
 }

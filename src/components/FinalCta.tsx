@@ -34,12 +34,12 @@ export default function FinalCta() {
       <div className="wrap">
         <div className={`final-inner ${styles.inner}`}>
           <span className={`eyebrow ${styles.eyebrow}`}>Vamos conversar?</span>
-          <h2 className={styles.h2}>Vamos conversar sobre as necessidades do seu filho?</h2>
+          <h2 className={styles.h2}>Vamos entender juntos o que seu filho precisa?</h2>
           <p className={styles.lead}>
-            Se você busca um atendimento pedagógico individualizado, acolhedor e planejado de acordo com as necessidades da sua criança, será um prazer conhecê-la e entender como podemos ajudar.
+            Se você busca um atendimento pedagógico individualizado, acolhedor e planejado de acordo com o que seu filho precisa, será um prazer conhecê-lo e entender como podemos caminhar juntos.
           </p>
           <div className={styles.cta}>
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btn}`}>
+            <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btn}`}>
               <WaIcon size={22} />
               Entre em contato pelo WhatsApp
             </a>

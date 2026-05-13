@@ -30,7 +30,7 @@ const cards = [
     color: "var(--cv-serenity-strong)",
     textColor: "var(--cv-marinho)",
     num: "60 min",
-    label: "De atendimento exclusivo",
+    label: "De atendimento exclusivo semanalmente",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
@@ -71,7 +71,7 @@ export default function Stats() {
         });
         gsap.from(".stat-card", {
           scrollTrigger: { trigger: ".stats-grid", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 32, scale: 0.9, duration: 0.5, ease: "back.out(1.4)", stagger: 0.1,
+          opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.1,
         });
       }, sectionRef);
       cleanup = () => ctx.revert();
