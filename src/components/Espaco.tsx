@@ -1,21 +1,22 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import styles from "./Espaco.module.css";
 import { CheckIcon } from "./icons";
 
 const bullets = [
-  "Ambiente premium e organizado",
+  "Ambiente acolhedor e organizado",
   "Recursos lúdicos e interativos",
   "Materiais exclusivos",
   "Espaço confortável e inspirador",
 ];
 
 const tiles = [
-  { label: "sala de aula", bg: "var(--cv-girassol-soft)", span: "tall" },
-  { label: "materiais", bg: "var(--cv-menta-soft)", span: "normal" },
-  { label: "jogos", bg: "var(--cv-serenity-soft)", span: "normal" },
-  { label: "recepção", bg: "var(--cv-coral-soft)", span: "wide" },
+  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento" },
+  { label: "materiais", src: "/espaco-materiais.webp", alt: "Materiais pedagógicos" },
+  { label: "jogos", src: "/espaco-jogos.webp", alt: "Sala de jogos do Catavento" },
+  { label: "recepção", src: "/espaco-recepcao.webp", alt: "Recepção do Catavento" },
 ];
 
 export default function Espaco() {
@@ -34,8 +35,9 @@ export default function Espaco() {
           opacity: 0, x: -32, duration: 0.6, ease: "power3.out", stagger: 0.1,
         });
         gsap.from(".espaco-tile", {
-          scrollTrigger: { trigger: ".espaco-gallery", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, scale: 0.88, duration: 0.55, ease: "back.out(1.4)", stagger: 0.1,
+          scrollTrigger: { trigger: ".espaco-gallery", start: "top 88%", toggleActions: "play none none none" },
+          opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.1,
+          immediateRender: false,
         });
       }, sectionRef);
       cleanup = () => ctx.revert();
@@ -63,14 +65,19 @@ export default function Espaco() {
             </ul>
           </div>
 
+          {/* Grade 2×2 — funciona em desktop, tablet e mobile */}
           <div className={`espaco-gallery ${styles.gallery}`}>
             {tiles.map((t, i) => (
-              <div
-                key={i}
-                className={`espaco-tile ${styles.tile} ${t.span === "tall" ? styles.tileTall : t.span === "wide" ? styles.tileWide : ""}`}
-                style={{ background: t.bg }}
-              >
-                <span className={styles.ph}>foto · {t.label}</span>
+              <div key={i} className={`espaco-tile ${styles.tile}`}>
+                <Image
+                  src={t.src}
+                  alt={t.alt}
+                  width={500}
+                  height={500}
+                  className={styles.tileImg}
+                  style={{ objectPosition: t.label === "jogos" ? "left center" : "center" }}
+                  sizes="(max-width: 640px) 47vw, (max-width: 980px) 220px, 280px"
+                />
               </div>
             ))}
           </div>

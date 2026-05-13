@@ -22,7 +22,7 @@
   z-index: 0;
 }
 
-.inner > * { position: relative; z-index: 1; }
+.inner > *:not(.blob) { position: relative; z-index: 1; }
 
 .h2 {
   font-size: 36px;

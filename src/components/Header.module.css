@@ -46,6 +46,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-left: auto;
 }
 
 .burger {
@@ -66,6 +67,7 @@
   transition: transform 200ms, opacity 200ms;
 }
 
+/* Mobile: nav vai pro hamburger, header fica fixo */
 @media (max-width: 900px) {
   .nav {
     display: none;
@@ -84,5 +86,13 @@
   }
   .navOpen { display: flex; }
   .burger { display: flex; }
-  .actions .btn { display: none; }
+}
+
+/* Mobile pequeno: logo menor, sem hamburger, botão CTA compacto */
+@media (max-width: 640px) {
+  .inner { padding-top: 10px; padding-bottom: 10px; gap: 8px; }
+  .logo img { height: 34px; }
+  .navCta { padding: 10px 14px !important; font-size: 13px !important; }
+  .navCtaLabel { display: none; }
+  .burger { display: none; }
 }

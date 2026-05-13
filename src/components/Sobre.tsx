@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import styles from "./Sobre.module.css";
 
 const badges = [
@@ -47,25 +48,13 @@ export default function Sobre() {
           <div className={`sobre-stage ${styles.stage}`} aria-hidden="true">
             <div className={styles.disc} />
             <div className={styles.photo}>
-              <svg viewBox="0 0 320 360" width="100%" height="100%" style={{ position: "absolute", inset: 0 }}>
-                <g transform="translate(60,110)">
-                  <path d="M0 180 q-10 -60 22 -90 q24 -22 48 0 q32 30 22 90z" fill="#F4C622"/>
-                  <circle cx="46" cy="62" r="44" fill="#A86A48"/>
-                  <path d="M2 60 q0 -44 44 -44 q44 0 44 44 q-16 -8 -44 -8 q-28 0 -44 8z" fill="#1F2D5C"/>
-                  <circle cx="32" cy="64" r="3" fill="#1F1F1F"/>
-                  <circle cx="60" cy="64" r="3" fill="#1F1F1F"/>
-                  <path d="M34 78 q12 8 24 0" stroke="#1F1F1F" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                </g>
-                <g transform="translate(170,110)">
-                  <path d="M0 180 q-10 -60 22 -90 q24 -22 48 0 q32 30 22 90z" fill="#D98B68"/>
-                  <circle cx="46" cy="62" r="44" fill="#C4886A"/>
-                  <path d="M0 56 q0 -50 46 -50 q46 0 46 50 q-22 -8 -46 -8 q-26 0 -46 8z" fill="#8B4513"/>
-                  <circle cx="32" cy="64" r="3" fill="#1F1F1F"/>
-                  <circle cx="60" cy="64" r="3" fill="#1F1F1F"/>
-                  <path d="M34 78 q12 8 24 0" stroke="#1F1F1F" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                </g>
-              </svg>
-              <span className={styles.photoLabel}>Fernanda &amp; Luiza</span>
+              <Image
+                src="/foto-sobre.jpg"
+                alt="Professoras Fernanda e Luiza"
+                fill
+                style={{ objectFit: "cover", objectPosition: "top center" }}
+                sizes="(max-width: 980px) 340px, 440px"
+              />
             </div>
           </div>
 

@@ -67,7 +67,7 @@ export default function Servicos() {
         });
         gsap.from(".serv-card", {
           scrollTrigger: { trigger: ".serv-grid", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, y: 40, duration: 0.6, ease: "power3.out", stagger: 0.1,
+          opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.1,
         });
         gsap.from(".serv-cta", {
           scrollTrigger: { trigger: ".serv-cta", start: "top 90%", toggleActions: "play none none none" },
@@ -87,8 +87,7 @@ export default function Servicos() {
             <span className="eyebrow">Como podemos ajudar</span>
             <h2>Como podemos ajudar seu filho</h2>
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Cada criança aprende de forma única. Por isso, planejamos atendimentos
-              personalizados, respeitando seu ritmo e suas necessidades.
+              Cada criança aprende de forma única. Por isso, planejamos aulas de acordo com suas necessidades.
             </p>
           </div>
         </div>
@@ -105,7 +104,7 @@ export default function Servicos() {
 
         <div className={`serv-cta ${styles.cta}`}>
           <p>Fale conosco e descubra como podemos ajudar seu filho.</p>
-          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
+          <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
             <WaIcon />
             Falar pelo WhatsApp
           </a>

@@ -23,14 +23,15 @@ export default function Diferenciais() {
       const { ScrollTrigger } = await import("gsap/ScrollTrigger");
       gsap.registerPlugin(ScrollTrigger);
 
+      const isMobile = window.innerWidth <= 640;
       const ctx = gsap.context(() => {
         gsap.from(".dif-copy", {
           scrollTrigger: { trigger: ".dif-copy", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, x: -40, duration: 0.8, ease: "power3.out",
+          opacity: 0, x: isMobile ? 0 : -40, duration: 0.8, ease: "power3.out",
         });
         gsap.from(".dif-item", {
           scrollTrigger: { trigger: ".dif-list", start: "top 85%", toggleActions: "play none none none" },
-          opacity: 0, x: 40, duration: 0.5, ease: "power3.out", stagger: 0.08,
+          opacity: 0, x: isMobile ? 0 : 40, duration: 0.5, ease: "power3.out", stagger: 0.08,
         });
       }, sectionRef);
       cleanup = () => ctx.revert();
@@ -53,7 +54,7 @@ export default function Diferenciais() {
               Cada atendimento é planejado para promover avanços acadêmicos, confiança, autonomia e segurança para aprender.
             </p>
             <div style={{ marginTop: 36 }}>
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
+              <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
                 <WaIcon />
                 Consulte a disponibilidade
               </a>

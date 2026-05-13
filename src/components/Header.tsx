@@ -44,9 +44,9 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
+          <a href="https://wa.me/5541988727103?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20quero%20saber%20mais%20sobre%20aulas%20particulares" target="_blank" rel="noopener noreferrer" className={`btn btn--primary ${styles.navCta}`}>
             <WaIcon />
-            Fale no WhatsApp
+            <span className={styles.navCtaLabel}>Fale no WhatsApp</span>
           </a>
           <button
             className={styles.burger}
