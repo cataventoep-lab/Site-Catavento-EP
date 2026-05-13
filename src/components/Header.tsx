@@ -44,7 +44,7 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <a href="#final" className="btn btn--primary">
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
             <WaIcon />
             Fale no WhatsApp
           </a>

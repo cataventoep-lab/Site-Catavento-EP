@@ -72,7 +72,7 @@ export default function Depoimentos() {
         <div className={`testi-cta ${styles.cta}`}>
           Será um prazer atender sua família também.
           <div style={{ marginTop: 18 }}>
-            <a href="#final" className="btn btn--primary">
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
               <WaIcon />
               Conversar pelo WhatsApp
             </a>

@@ -53,7 +53,7 @@ export default function Diferenciais() {
               Cada atendimento é planejado para promover avanços acadêmicos, confiança, autonomia e segurança para aprender.
             </p>
             <div style={{ marginTop: 36 }}>
-              <a href="#final" className="btn btn--primary">
+              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
                 <WaIcon />
                 Consulte a disponibilidade
               </a>

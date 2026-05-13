@@ -52,7 +52,7 @@ export default function Local() {
             </div>
 
             <div className={styles.cta}>
-              <a href="#final" className="btn btn--primary">
+              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
                 <WaIcon />
                 Agende uma visita e conheça nosso espaço
               </a>
