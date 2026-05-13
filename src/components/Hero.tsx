@@ -43,6 +43,13 @@ export default function Hero() {
             Aulas particulares, reforço escolar e alfabetização com planejamento
             personalizado e acompanhamento contínuo.
           </p>
+          <div className={`hero-grade ${styles.gradeBadge}`}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            Atendemos do 1º ao 7º ano
+          </div>
+
           <div className={`hero-cta ${styles.cta}`}>
             <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
               <WaIcon />
