@@ -33,7 +33,7 @@
   font-weight: 500;
 }
 
-/* Grade 2×2 — desktop/tablet */
+/* Grade 2×2 */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -42,17 +42,19 @@
 
 .tile {
   border-radius: var(--cv-radius-lg);
-  position: relative;
   overflow: hidden;
-  padding-top: 100%; /* altura = largura da coluna */
   transition: transform 220ms cubic-bezier(0.22,1,0.36,1);
 }
 .tile:hover { transform: scale(1.03); }
 
-/* Mobile: foto única */
-.galleryMobile { display: none; }
-
-.tileTall { /* não usado mais, mantido por compatibilidade */ }
+/* Imagem responsiva quadrada — sem fill, sem position:absolute */
+.tileImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
 
 .ph {
   background: rgba(255,255,255,0.7);
@@ -69,6 +71,5 @@
 }
 @media (max-width: 640px) {
   .h2 { font-size: 28px; }
-  .gallery { display: none; }
-  .galleryMobile { display: block; margin-top: 28px; }
+  .gallery { max-width: 100%; }
 }

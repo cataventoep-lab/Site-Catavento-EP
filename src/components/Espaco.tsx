@@ -13,10 +13,10 @@ const bullets = [
 ];
 
 const tiles = [
-  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento", bg: "var(--cv-girassol-soft)" },
-  { label: "materiais", src: "/espaco-materiais.webp", alt: "Materiais pedagógicos", bg: "var(--cv-menta-soft)" },
-  { label: "jogos", src: "/espaco-jogos.webp", alt: "Sala de jogos do Catavento", bg: "var(--cv-serenity-soft)" },
-  { label: "recepção", src: "/espaco-recepcao.webp", alt: "Recepção do Catavento", bg: "var(--cv-coral-soft)" },
+  { label: "sala de aula", src: "/espaco-sala.webp", alt: "Sala de aula do Catavento" },
+  { label: "materiais", src: "/espaco-materiais.webp", alt: "Materiais pedagógicos" },
+  { label: "jogos", src: "/espaco-jogos.webp", alt: "Sala de jogos do Catavento" },
+  { label: "recepção", src: "/espaco-recepcao.webp", alt: "Recepção do Catavento" },
 ];
 
 export default function Espaco() {
@@ -34,9 +34,8 @@ export default function Espaco() {
           scrollTrigger: { trigger: ".espaco-copy", start: "top 85%", toggleActions: "play none none none" },
           opacity: 0, x: -32, duration: 0.6, ease: "power3.out", stagger: 0.1,
         });
-        // immediateRender: false → tiles ficam visíveis até o tween iniciar
         gsap.from(".espaco-tile", {
-          scrollTrigger: { trigger: ".espaco-gallery", start: "top 85%", toggleActions: "play none none none" },
+          scrollTrigger: { trigger: ".espaco-gallery", start: "top 88%", toggleActions: "play none none none" },
           opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.1,
           immediateRender: false,
         });
@@ -66,37 +65,21 @@ export default function Espaco() {
             </ul>
           </div>
 
-          {/* Desktop/tablet: grade 2×2 */}
+          {/* Grade 2×2 — funciona em desktop, tablet e mobile */}
           <div className={`espaco-gallery ${styles.gallery}`}>
             {tiles.map((t, i) => (
-              <div
-                key={i}
-                className={`espaco-tile ${styles.tile}`}
-                style={t.src ? undefined : { background: t.bg }}
-              >
-                {t.src && (
-                  <Image
-                    src={t.src}
-                    alt={t.alt}
-                    fill
-                    style={{ objectFit: "cover", objectPosition: t.label === "jogos" ? "left center" : "center" }}
-                    sizes="(max-width: 980px) 45vw, 300px"
-                  />
-                )}
+              <div key={i} className={`espaco-tile ${styles.tile}`}>
+                <Image
+                  src={t.src}
+                  alt={t.alt}
+                  width={500}
+                  height={500}
+                  className={styles.tileImg}
+                  style={{ objectPosition: t.label === "jogos" ? "left center" : "center" }}
+                  sizes="(max-width: 640px) 47vw, (max-width: 980px) 220px, 280px"
+                />
               </div>
             ))}
-          </div>
-
-          {/* Mobile: foto única com dimensões explícitas */}
-          <div className={styles.galleryMobile}>
-            <Image
-              src="/espaco-sala.webp"
-              alt="Sala de aula do Catavento Espaço Pedagógico"
-              width={800}
-              height={600}
-              style={{ width: "100%", height: "auto", borderRadius: "var(--cv-radius-lg)", display: "block" }}
-              sizes="(max-width: 640px) 100vw"
-            />
           </div>
         </div>
       </div>
